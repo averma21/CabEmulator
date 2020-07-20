@@ -1,10 +1,10 @@
-package util;
+package com.amrit.cabemulator.util;
 
 import com.amrit.taxiserviceapi.messaging.Position;
 
 public class StraightLine {
 
-    private static final double X_LEAP = 0.001;
+    private static final double X_LEAP = 20;
 
     final Position from;
     final Position to;
@@ -34,5 +34,9 @@ public class StraightLine {
         }
         current = to;
         return to;
+    }
+
+    public boolean isEndPoint(Position position) {
+        return to.equals(position);
     }
 }

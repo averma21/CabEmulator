@@ -8,6 +8,10 @@
     <artifactId>CabEmulator</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <logback.version>1.2.3</logback.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -21,11 +25,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka-clients</artifactId>
-            <version>2.5.0</version>
-        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -42,6 +41,22 @@
             <artifactId>taxiserviceapi</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+
 
     </dependencies>
 
